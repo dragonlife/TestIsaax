@@ -1,13 +1,10 @@
-var http = require('http');
-var options = {
-        method: 'HEAD',
-        host: '127.0.0.1',
-        port: '48080'        
-}; // isaaxd server
 
-var req = http.request(options, function(res) {
-            console.log('Hello Isaax! %s %s', res.statusCode, res.statusMessage);
+car http=require('http');
+var server=ttp.createServer();　
+server.on('request', function(req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});　
+  res.write('Hello World');
+  res.end();
 })
-
-req.end();
+server.listen(8080, '0.0.0.0')
 
